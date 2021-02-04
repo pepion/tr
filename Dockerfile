@@ -37,7 +37,7 @@ RUN apt-get install -y automake autoconf libtool pkg-config nasm build-essential
 
 # chromium
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get install -y --no-install-recommends chromium libxss-1
+RUN apt-get install -y --no-install-recommends chromium libxss1 libX11-xcb-dev
 ENV CHROME_BIN=chromium
 # CMD ["npm", "start"]
 
