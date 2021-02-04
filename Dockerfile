@@ -1,6 +1,10 @@
 FROM openjdk:8
 MAINTAINER pepion@gmail.com
 
+ARG REFRESHED_AT
+ENV REFRESHED_AT $REFRESHED_AT
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # NODE
 # RUN apt-get update
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
