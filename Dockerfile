@@ -33,7 +33,7 @@ RUN apt-get install -y docker-ce docker-ce-cli containerd.io
 RUN service docker start
 
 # OTHER: autoreconf
-RUN apt-get install -y automake autoconf libtool pkg-config nasm build-essential
+RUN apt-get install -y automake autoconf libtool pkg-config nasm build-essential dh-autoreconf
 
 # VOLUME
 WORKDIR /setbuilder
