@@ -32,8 +32,13 @@ RUN apt-get update
 RUN apt-get install -y docker-ce docker-ce-cli containerd.io
 RUN service docker start
 
-# OTHER: autoreconf
-RUN apt-get install -y automake autoconf libtool pkg-config nasm build-essential dh-autoreconf libx11-6 libx11-xcb1
+# OTHER
+RUN apt-get install -y automake autoconf libtool pkg-config nasm build-essential dh-autoreconf libx11-6 libx11-xcb1 libxcb-dri3
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get install -y --no-install-recommends chromium
+ENV CHROME_BIN=chromium
+# CMD ["npm", "start"]
 
 # VOLUME
 WORKDIR /setbuilder
