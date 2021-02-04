@@ -40,7 +40,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y --no-install-recommends chromium libxss1 libx11-xcb-dev
 ENV CHROME_BIN=chromium
 # CMD ["npm", "start"]
-RUN chrome --version
+RUN chromium --version
 
 # VOLUME
 WORKDIR /setbuilder
