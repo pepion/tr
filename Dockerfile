@@ -35,7 +35,7 @@ RUN service docker start
 # autoreconf
 RUN apt-get install -y automake autoconf libtool pkg-config nasm build-essential dh-autoreconf
 
-# chromium
+# headless-chromium
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y --no-install-recommends chromium libxss1 libx11-xcb-dev
 ENV CHROME_BIN=chromium
