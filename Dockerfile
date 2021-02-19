@@ -11,6 +11,11 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
 	 apt-get install -y nodejs && \
 	 apt-get install -y build-essential
 
+RUN npm install -g yarn
+RUN yarn global add @angular/cli
+RUN ng config -g cli.packageManager yarn
+RUN yarn global add @angular-devkit/build-angular
+
 # DOCKER
 #RUN apt-get update
 RUN apt-get install -y \
