@@ -44,6 +44,8 @@ RUN chromium --version
 
 RUN npm install -g gulp
 
+RUN apt-get install -y --no-install-recommends mc
+
 # VOLUME
 WORKDIR /setbuilder
 
