@@ -42,6 +42,8 @@ ENV CHROME_BIN=chromium
 # CMD ["npm", "start"]
 RUN chromium --version
 
+RUN npm install -g gulp
+
 # VOLUME
 WORKDIR /setbuilder
 
